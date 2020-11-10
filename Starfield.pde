@@ -43,6 +43,19 @@ void setup()
       fill(myColor);
       ellipse((float)myX, (float)myY, (float)mySize, (float)mySize);
     }
+    void reset()
+    {
+      myX = 300;
+      myY = 300;
+    }
+  }
+  void mousePressed()
+  {
+    background(0);
+    for (int i = 0; i < parts.length; i++)
+    {
+      parts[i].reset();
+    }
   }
 
   class OddballParticle extends Particle //inherits from Particle
